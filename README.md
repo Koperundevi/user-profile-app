@@ -1,27 +1,56 @@
-# UserProfileApp
+# Simple User Profile Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
+## Prerequisities
 
-## Development server
+1. Node 10.x +
+2. Backend API running in the port 3333 or heroku. API URL should be set appropriately in environments
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Running the application
 
-## Code scaffolding
+1. Install dependencies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+npm i
+```
 
-## Build
+There are two ways to run the application.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+2. Application can be started in dev mode by running the following command
 
-## Running unit tests
+```
+npm run dev
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Application will be served at http://localhost:4200/. The app will automatically reload if there is change in any of the source files.
 
-## Running end-to-end tests
+3. Build the prototype and serve it using static server
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Build the prototype using the below command to use dev configuration (src/environments/environment.ts)
 
-## Further help
+```
+npm run build:dev
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Serve the prototype using command
+
+```
+npm start
+```
+
+Application will be served at http://localhost:8080
+
+### Linting and formatting of source code
+
+Source can be formatted using prettier by running
+
+```
+npm run format
+```
+
+Source code can be linted using TS lint by executing the command
+
+```
+npm run lint
+```
+
+Formatting and linting will happen automatically before committing. Commit will fail if there are any lint errors.

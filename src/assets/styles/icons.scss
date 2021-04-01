@@ -1,0 +1,11 @@
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  &.loading-green {
+    background-image: url("../icons/loading-green.svg");
+  }
+}

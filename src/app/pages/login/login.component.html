@@ -1,0 +1,23 @@
+<div class="login-page d-flex flex-column">
+  <header class="header">
+    <span class="header-title">Simple User Profile App</span>
+  </header>
+
+  <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+    <ng-container *ngIf="verifingMe; else elseTemplate">
+      <div class="login-box d-flex flex-column align-items-center justify-content-center">
+        <i class="icon loading-green"></i>
+        <div class="section-heading wait">Please wait!</div>
+        <div class="section-heading validating">Your existing session is being validated.</div>
+      </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <div class="login-box d-flex flex-column align-items-center justify-content-center">
+        <h3 class="section-heading">Login with Github</h3>
+        <a [href]="loginUrl" class="logo">
+          <img src="./assets/images/github-logo.png" alt="login" width="170" />
+        </a>
+      </div>
+    </ng-template>
+  </div>
+</div>

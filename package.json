@@ -3,13 +3,20 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "dev": "ng serve",
+    "start": "node server.js",
+    "build": "ng build --prod",
+    "build:dev": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "format": "prettier . --write"
   },
-  "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && ng lint --fix"
+    }
+  },
   "dependencies": {
     "@angular/animations": "~11.2.7",
     "@angular/common": "~11.2.7",
@@ -19,6 +26,11 @@
     "@angular/platform-browser": "~11.2.7",
     "@angular/platform-browser-dynamic": "~11.2.7",
     "@angular/router": "~11.2.7",
+    "@types/lodash": "^4.14.168",
+    "bootstrap": "^4.6.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "ngx-toastr": "^13.2.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.11.3"
@@ -30,6 +42,7 @@
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "husky": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~6.1.0",
@@ -37,6 +50,8 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "prettier": "^2.2.1",
+    "pretty-quick": "^3.1.0",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
