@@ -15,6 +15,11 @@ export class LoginComponent implements OnInit {
 
   constructor(private userService: UserService, private router: Router) {}
 
+  /**
+   * On page load, check if token exist in local storage,
+   * if token is present, validate it by fetching user details from API
+   * and navigate user to profile page
+   */
   ngOnInit(): void {
     const token = localStorage.getItem('access_token');
     if (token) {

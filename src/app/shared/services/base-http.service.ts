@@ -63,7 +63,7 @@ export class BaseHttpService {
   }
 
   /**
-   * Performs a request with `put` http method.
+   * Performs a request with `patch` http method.
    * @param url the url
    * @param body the body
    * @param options the request options

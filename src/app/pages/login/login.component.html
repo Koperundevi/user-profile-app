@@ -2,8 +2,8 @@
   <header class="header">
     <span class="header-title">Simple User Profile App</span>
   </header>
-
   <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+    <!-- If token is present in local storage, validate it and navigate to profile page -->
     <ng-container *ngIf="verifingMe; else elseTemplate">
       <div class="login-box d-flex flex-column align-items-center justify-content-center">
         <i class="icon loading-green"></i>
@@ -11,6 +11,7 @@
         <div class="section-heading validating">Your existing session is being validated.</div>
       </div>
     </ng-container>
+    <!-- If token is not present in local storage, display login page -->
     <ng-template #elseTemplate>
       <div class="login-box d-flex flex-column align-items-center justify-content-center">
         <h3 class="section-heading">Login with Github</h3>

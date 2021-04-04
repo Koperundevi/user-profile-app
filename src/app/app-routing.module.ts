@@ -1,3 +1,4 @@
+/* Module taking care of angular application routing */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

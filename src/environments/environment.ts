@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  API_URL: 'http://localhost:3333/api/v1',
+  API_URL: 'https://user-profile-api.herokuapp.com',
 };
 
 /*

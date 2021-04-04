@@ -1,5 +1,6 @@
+// Model for User
 export class UserModel {
   id = '';
-  name = '';
-  email = '';
+  username = '';
+  isactive = false;
 }
